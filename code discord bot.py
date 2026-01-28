@@ -1,0 +1,46 @@
+import random
+import re
+import unicodedata
+import os
+import discord
+from discord.ext import commands
+
+TOKEN = "..."
+
+intents = discord.Intents.default()
+intents.message_content=True
+bot = commands.Bot(command_prefix ="!", intents=intents)
+
+def normaliser(s: str) -> str:
+    s = s.lower().strip()
+    s = unicodedata.normalize("NFD", s)
+    s = "".join(c for c in s if unicodedata.category(c) != "Mn")  # enlève accents
+    s = re.sub(r"[^a-z0-9\s]", "", s)  # enlève ponctuation
+    s = re.sub(r"\s+", " ", s)         # espaces multiples -> 1 espace
+    return s
+
+PROMPTS = {
+    "good morning": ["good morning", "have you dreamed about me?", "where's my sweetheart went ? come back sleep","rise and shine, sweetheart"],
+    "good night": ["already ?", "I'll keep an eye on you","I'm coming","Have sweet dreams"],
+    "i love you": ["proof or fake ?", "i love you too","me too sweetheart"]
+}
+
+@bot.event
+async def on_message(message):
+    if message.author.bot:
+        return
+
+    texte = normaliser(message.content)
+
+    for key, reponses in PROMPTS.items():
+        if texte == normaliser(key):
+            await message.channel.send(random.choice(reponses))
+            return
+
+    await bot.process_commands(message)
+
+@bot.command()
+async def ping(ctx):
+    await bot.process_commands(message)
+
+bot.run(TOKEN)
