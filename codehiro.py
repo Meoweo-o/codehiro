@@ -2,6 +2,7 @@ import random
 import re
 import unicodedata
 import os
+TOKEN = os.environ["DISCORD_TOKEN"]
 import discord
 from discord.ext import commands
 
@@ -50,4 +51,5 @@ async def ping(ctx):
     await bot.process_commands(message)
 
 bot.run(TOKEN)
+
 
