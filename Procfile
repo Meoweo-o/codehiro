@@ -1,1 +1,1 @@
-worker: python codehiro.py
+worker: python "codehiro.py"
