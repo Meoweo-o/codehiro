@@ -20,14 +20,14 @@ def normaliser(s: str) -> str:
     return s
 
 PROMPTS = {
-    "Good morning Eden": ["gm", "sup", "move your ass and make me a coffee"],
-    "Good night Eden": ["gn", "don't dream about me","I'm coming"],
-    "I love you Eden": ["I love myself too", "who ?", "..me too.."],
+    "Good morning Eden": ["Gm", "'Sup", "Move your ass and make me a coffee"],
+    "Good night Eden": ["Gn", "Don't dream about me","I'm coming"],
+    "I love you Eden": ["I love myself too", "Who ?", "..me too.."],
     "I hate you Eden": ["I hate you too", "cool", "lol"],
-    "Have you ate Eden ?": ["Yes", "Did you ? nvm i Don't care"],
-    "Let's having fun Eden": ["Don't say it twice", "get on your knees, open your mouth and close your eyes", "No", "ask someone else"],
-    "I prefer your mom Eden": ["i know right"],
-    "I prefer your brother Eden": ["This man have too much fan"],
+    "Have you ate Eden ?": ["Yes", "Did you ? Nvm I don't care"],
+    "Let's having fun Eden": ["||Don't say it twice", "get on your knees, open your mouth and close your eyes||", "||No||", "||Ask someone else||", "Let's make it in Hiro room"],
+    "I prefer your mom Eden": ["i know right", "I do too"],
+    "I prefer your brother Eden": ["This man have too much fan", "Liar"],
 }
 
 @bot.event
