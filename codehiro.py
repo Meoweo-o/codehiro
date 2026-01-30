@@ -26,7 +26,7 @@ PROMPTS = {
     "I love you Hiro": ["Proof or fake ?", "I love you too","Me too sweetheart", "愛してるよ、愛しい人","Je t'aime aussi, jolie coeur"],
     "I hate you Hiro": ["I thought you loved me", "Are you seeing someone else ?", "..."],
     "Have you ate Hiro ?": ["I did, and you", "No, I wanted to eat with you, wanna go outside ?"],
-    "Let's having fun Hiro": ["Right now ? Omw get ready for me", "Which position you want this time ?", "I'll be there in 10min", "Let's try something new tonight"],
+    "Let's having fun Hiro": ["||Right now ? Omw get ready for me||", "||Which position you want this time ?||", "||I'll be there in 10min||", "||Let's try something new tonight||"],
     "I prefer your mom Hiro": ["what the fuck.."],
     "I prefer your brother Hiro": ["Where this bitch go..brb"],
 
@@ -51,6 +51,7 @@ async def ping(ctx):
     await bot.process_commands(message)
 
 bot.run(TOKEN)
+
 
 
 
