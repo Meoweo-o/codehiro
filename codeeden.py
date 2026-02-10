@@ -20,7 +20,7 @@ def normaliser(s: str) -> str:
     return s
 
 PROMPTS = {
-    "Good morning Eden": ["Gm", "'Sup", "Move your ass and make me a coffee"],
+    "Good morning Eden": ["Good morning", "'Sup", "Move your ass and make me a coffee"],
     "Good night Eden": ["Gn", "Don't dream about me","I'm coming"],
     "I love you Eden": ["I love myself too", "Who ?", "..me too.."],
     "I hate you Eden": ["I hate you too", "cool", "lol"],
